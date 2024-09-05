@@ -446,7 +446,7 @@ section {
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 3rem;
     margin: 5rem 0;
     text-align: center;
@@ -466,6 +466,14 @@ section {
     margin: 1.5rem 0;
     resize: none;
 
+}
+
+.professional-img img{
+    width: 300px;
+    border-radius: 100px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid #f6a470;
 }
 
 .footer {
