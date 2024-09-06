@@ -429,9 +429,59 @@ section {
 
 }
 
+.project {
+    padding: 100px 12%;
+    background-color: var(--second-bg-color);
+}
+
+.projects-column{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-1 {
+    width: 32%;
+    background-color: #f6a470;
+    border-radius: 20px;
+    padding: 0px 0px 20px 0px;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: .4s;
+}
+
+.project-1:hover{
+    box-shadow: 0 0 25px var(--main-color),
+    0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
+}
+
+.project-1 img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.project-1 h2{
+    font-size: 2rem;
+    padding-left: 10px;
+    color: #000;
+}
+
+.project-1 p{
+    font-size: 1.5rem;
+    padding-left: 10px;
+    color: #000;
+}
+
+.project h1{
+    font-size: 7rem;
+    text-align: center;
+}
+
 .contact {
 
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
 
 }
 
@@ -526,13 +576,6 @@ section {
 }
 
 @media(max-width: 1024px) {
-
-    #menu-icon {
-
-        display: block;
-
-    }
-
     .cursor-dot,
     .cursor-outline {
 
@@ -540,32 +583,34 @@ section {
 
     }
 
-    .navbar {
+    #menu-icon {
+        display: block;
+    }
 
+    .navbar {
+        width: 100%;
         position: absolute;
         top: 100%;
         right: 0;
-        padding: 1rem 13rem;
+        padding: 0rem 16rem;
         background-color: rgba(0, 0, 0, 0.8);
-        border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
-        border-bottom-left-radius: 2rem;
-        display: none;
-        transition: 20s;
+        border-radius: 2rem;
+        max-height: 0; /* Initially, height is 0 */
+        overflow: hidden; /* Hide the content */
+        display: block; /* Always keep it block for animation */
+        transition: max-height 0.5s ease; /* Smooth transition */
+    }
 
+    .navbar.active {
+        max-height: 500px; /* Max height to show content */
     }
 
     .navbar a {
-
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
         color: var(--text-color);
-
-    }
-
-    .navbar.active {
-        display: block;
     }
 
     .home {
@@ -620,5 +665,9 @@ section {
     .home-img img {
         width: 300px;
         height: 230px;
+    }
+
+    .project-1 {
+        width: 100%;
     }
 }
