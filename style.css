@@ -576,6 +576,11 @@ section {
 
     }
 
+    .header {
+    background: #0000004f;
+    backdrop-filter: blur(10px);
+}
+
     #menu-icon {
         display: block;
     }
@@ -663,4 +668,5 @@ section {
     .project-1 {
         width: 100%;
     }
+    
 }
